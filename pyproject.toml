@@ -1,0 +1,31 @@
+[project]
+name = "ur-mcp"
+version = "0.1.0"
+description = "MCP server that moves an oscilloscope probe on a Universal Robots UR3e / UR5e to named PCB test points (with built-in simulator)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["mcp", "universal-robots", "ur3e", "ur5e", "urscript", "rtde", "pcb", "test-automation"]
+dependencies = [
+    "fastmcp>=4.2.1",
+    "numpy>=2.4.6",
+]
+
+[project.scripts]
+ur-mcp = "ur_mcp.__main__:main"
+
+[build-system]
+requires = ["uv_build>=0.12.21,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.uv]
+python-preference = "only-managed"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

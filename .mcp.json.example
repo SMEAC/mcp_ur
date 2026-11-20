@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "ur": {
+      "command": "uv",
+      "args": ["run", "--directory", "C:\\dev\\mcp_stuff\\mcp_ur", "ur-mcp"],
+      "env": {
+        "UR_HOST": "192.168.1.20",
+        "UR_MODEL": "ur3e"
+      }
+    },
+    "ur-sim": {
+      "command": "uv",
+      "args": ["run", "--directory", "C:\\dev\\mcp_stuff\\mcp_ur", "ur-mcp", "--simulate"]
+    },
+    "msox2014a": {
+      "command": "uv",
+      "args": ["run", "--directory", "C:\\dev\\mcp_stuff\\mcp_msox2014a", "msox2014a-mcp"],
+      "env": {
+        "MSOX_RESOURCE": "USB0::0x0957::0x1798::MY12345678::0::INSTR"
+      }
+    }
+  }
+}
